@@ -1,0 +1,41 @@
+body {
+    background: darkslategray;
+}
+h1 {
+    padding-top: 20px;
+
+}
+.container{
+    max-width: 600px;
+}
+input[type=text],
+input[type=text]:focus{
+    color: cadetblue;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    max-width: 700px;
+}
+
+.todos li{
+    /*background: brown;*/
+    background: darkcyan;
+    transition: all 0.5s ease;
+}
+.todo span{
+    flex: 1;
+}
+.delete {
+    cursor: pointer;
+    padding: 4px;
+}
+.check {
+    cursor: pointer;
+    padding: 4px;
+}
+.filtered {
+    display: none !important;
+}
+.completed{
+    /*text-decoration: line-through;*/
+    opacity: 0.5;
+}
