@@ -1,1 +1,1 @@
-# ToDoList
+# JS mini project 
