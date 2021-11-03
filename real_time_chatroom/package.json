@@ -1,0 +1,7 @@
+{
+  "name": "Real-time_Chatroom",
+  "version": "1.0.0",
+  "dependencies": {
+    "firebase": "^9.1.3"
+  }
+}

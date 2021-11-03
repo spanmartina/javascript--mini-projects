@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Real-time Chatroom</title>
+</head>
+<body>
+
+<!-- container & title -->
+<div class="container my-4">
+    <h1 class="my-4 text-center">Chatroom</h1>
+    <!-- buttons for chatroom -->
+    <div class="chat-rooms mb-3 text-center">
+        <div class="my-2">Choose a chatroom:</div>
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="gaming">#gaming</button>
+        <button class="btn" id="music">#music</button>
+        <button class="btn" id="ninjas">#ninjas</button>
+    </div>
+    <!-- chat list / window -->
+    <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+    </div>
+    <!-- new chat form -->
+    <form class="new-chat my-3">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Your message:</div>
+            </div>
+            <input type="text" id="message" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="send">
+            </div>
+        </div>
+    </form>
+    <!-- update name form -->
+    <form class="new-name my-3">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Update name:</div>
+            </div>
+            <input type="text" id="name" class="form-control" required>
+            <div class="input-group-append">
+                <input type="submit" class="btn" value="update">
+            </div>
+        </div>
+        <div class="update-mssg"></div>
+    </form>
+</div>
+
+
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+<script>
+    const config = {
+        apiKey: "AIzaSyCeDpwRJS5ICj8tES68ltBtw46Y42P1MPs",
+        authDomain: "modern--javascript.firebaseapp.com",
+        projectId: "modern--javascript",
+        storageBucket: "modern--javascript.appspot.com",
+        messagingSenderId: "409552281587",
+        appId: "1:409552281587:web:ef949782daa05456f37c86",
+        measurementId: "G-D7TWW1TY3K"
+    };
+
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+
+</script>
+<!--<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>-->
+<!--<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>-->
+
+
+<!--<script>-->
+<!--    // Import the functions you need from the SDKs you need-->
+<!--    import { initializeApp } from "firebase/app";-->
+<!--    import { getFirestore } from "firebase/firestore";-->
+
+<!--    const firebaseConfig = {-->
+<!--        apiKey: "AIzaSyCeDpwRJS5ICj8tES68ltBtw46Y42P1MPs",-->
+<!--        authDomain: "modern&#45;&#45;javascript.firebaseapp.com",-->
+<!--        projectId: "modern&#45;&#45;javascript",-->
+<!--        storageBucket: "modern&#45;&#45;javascript.appspot.com",-->
+<!--        messagingSenderId: "409552281587",-->
+<!--        appId: "1:409552281587:web:9422e831384f54a6f37c86",-->
+<!--        measurementId: "G-FZJNPT8PKK"-->
+<!--    };-->
+
+<!--    // Initialize Firebase-->
+<!--    const app = initializeApp(firebaseConfig);-->
+<!--    let defaultFirestore = getFirestore(app);-->
+<!--</script>-->
+
+
+
+<!--<script type="module">-->
+<!--    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";-->
+<!--    import {getFirestore} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";-->
+
+<!--    const firebaseApp = initializeApp({-->
+<!--        apiKey: "AIzaSyCeDpwRJS5ICj8tES68ltBtw46Y42P1MPs",-->
+<!--        authDomain: "modern&#45;&#45;javascript.firebaseapp.com",-->
+<!--        projectId: "modern&#45;&#45;javascript",-->
+<!--        storageBucket: "modern&#45;&#45;javascript.appspot.com",-->
+<!--        messagingSenderId: "409552281587",-->
+<!--        appId: "1:409552281587:web:ef949782daa05456f37c86",-->
+<!--        measurementId: "G-D7TWW1TY3K"-->
+<!--    });-->
+
+<!--    const db = getFirestore(firebaseApp);-->
+
+<!--</script>-->
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
